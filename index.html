@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>Eco Warriors - 环保行动者</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,11 +14,11 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #1a5f7a;
+            --secondary: #159895;
+            --accent: #57c5b6;
+            --light: #f0f7ff;
+            --dark: #002b5b;
             --text: #333333;
             --white: #ffffff;
         }
@@ -182,37 +182,41 @@
             margin: 0 auto;
         }
 
-        .about-content {
+        .mission {
+            background-color: var(--white);
+        }
+
+        .mission-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
         }
 
-        .about-img {
+        .mission-img {
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .about-img img {
+        .mission-img img {
             width: 100%;
             height: auto;
             display: block;
             transition: transform 0.5s ease;
         }
 
-        .about-img:hover img {
+        .mission-img:hover img {
             transform: scale(1.05);
         }
 
-        .about-text h3 {
+        .mission-text h3 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
 
-        .about-text p {
+        .mission-text p {
             margin-bottom: 1.5rem;
         }
 
@@ -252,17 +256,17 @@
             color: var(--text);
         }
 
-        .initiatives {
+        .programs {
             background-color: var(--white);
         }
 
-        .initiatives-grid {
+        .programs-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .initiative-card {
+        .program-card {
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
@@ -270,38 +274,92 @@
             transition: transform 0.3s ease;
         }
 
-        .initiative-card:hover {
+        .program-card:hover {
             transform: translateY(-10px);
         }
 
-        .initiative-img {
+        .program-img {
             height: 200px;
             overflow: hidden;
         }
 
-        .initiative-img img {
+        .program-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .initiative-card:hover .initiative-img img {
+        .program-card:hover .program-img img {
             transform: scale(1.1);
         }
 
-        .initiative-content {
+        .program-content {
             padding: 1.5rem;
         }
 
-        .initiative-content h3 {
+        .program-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .initiative-content p {
+        .program-content p {
             margin-bottom: 1.5rem;
+        }
+
+        .events {
+            background-color: var(--light);
+        }
+
+        .events-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .event-item {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+        }
+
+        .event-date {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            min-width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-date .day {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .event-date .month {
+            font-size: 1.2rem;
+        }
+
+        .event-details {
+            padding: 1.5rem;
+            flex: 1;
+        }
+
+        .event-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .event-details p {
+            margin-bottom: 1rem;
+            color: var(--text);
         }
 
         .cta {
@@ -423,12 +481,16 @@
         }
 
         @media (max-width: 992px) {
-            .about-content {
+            .mission-content {
                 grid-template-columns: 1fr;
             }
             
-            .initiatives-grid {
+            .programs-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .events-list {
+                grid-template-columns: 1fr;
             }
             
             .footer-content {
@@ -475,7 +537,7 @@
                 display: block;
             }
             
-            .initiatives-grid {
+            .programs-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -499,19 +561,19 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-earth-americas"></i>
+                <span>Eco Warriors</span>
             </div>
             <nav>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#mission">使命</a></li>
+                    <li><a href="#programs">项目</a></li>
+                    <li><a href="#events">活动</a></li>
+                    <li><a href="#get-involved">参与</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,92 +582,148 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>成为地球的守护者</h1>
+            <p>加入全球环保行动者行列，通过实际行动保护我们珍贵的自然资源，为下一代创造更美好的未来。</p>
+            <a href="#get-involved" class="btn">立即行动</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Mission Section -->
+    <section id="mission">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>我们的使命</h2>
+                <p>Eco Warriors致力于通过教育、行动和社区参与，推动可持续生活方式和环境友好实践。</p>
             </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h3>为可持续未来而战</h3>
+                    <p>Eco Warriors成立于2015年，是一个由志愿者驱动的全球性环保组织。我们相信，每个人的小小行动汇聚起来，能够产生巨大的积极影响。</p>
+                    <p>我们的工作重点包括减少塑料污染、推广可再生能源、保护生物多样性和倡导气候行动。</p>
+                    <p>通过与当地社区、学校和企业合作，我们正在建立一个更强大、更有韧性的环保网络。</p>
+                    <a href="#" class="btn">了解更多</a>
                 </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                <div class="mission-img">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="环保志愿者">
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
-                </div>
-                <div class="stat-item">
                     <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <h3 class="counter" data-target="1250000">0</h3>
+                    <p>回收塑料(公斤)</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3 class="counter" data-target="75000">0</h3>
+                    <p>环保志愿者</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-hand-holding-water"></i>
+                    <h3 class="counter" data-target="350">0</h3>
+                    <p>清洁水源项目</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-solar-panel"></i>
+                    <h3 class="counter" data-target="1200">0</h3>
+                    <p>太阳能安装</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>我们的项目</h2>
+                <p>探索我们正在实施的各类环保项目，每个项目都旨在解决特定的环境挑战。</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="塑料回收">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="program-content">
+                        <h3>塑料回收革命</h3>
+                        <p>建立社区塑料回收系统，将废弃塑料转化为有用产品，减少海洋塑料污染。</p>
+                        <a href="#" class="btn">参与项目</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="可再生能源">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="program-content">
+                        <h3>社区太阳能计划</h3>
+                        <p>为低收入家庭和社区中心安装太阳能板，推广清洁能源使用。</p>
+                        <a href="#" class="btn">参与项目</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="海洋保护">
+                    </div>
+                    <div class="program-content">
+                        <h3>海岸线守护者</h3>
+                        <p>组织定期海滩清洁活动，监测海洋健康状况，保护海洋生态系统。</p>
+                        <a href="#" class="btn">参与项目</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>近期活动</h2>
+                <p>参与我们的环保活动和教育项目，与志同道合的人一起行动。</p>
+            </div>
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="day">15</div>
+                        <div class="month">六月</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>城市植树日</h3>
+                        <p>加入我们在城市公园和社区的植树活动，帮助增加城市绿化覆盖率。</p>
+                        <a href="#" class="btn">报名参加</a>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="day">22</div>
+                        <div class="month">六月</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>零废物工作坊</h3>
+                        <p>学习如何减少家庭废物，制作环保替代品，实践可持续生活方式。</p>
+                        <a href="#" class="btn">报名参加</a>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="day">05</div>
+                        <div class="month">七月</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>河流清洁行动</h3>
+                        <p>帮助我们清理本地河流，保护水资源和河流生态系统。</p>
+                        <a href="#" class="btn">报名参加</a>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="day">18</div>
+                        <div class="month">七月</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>环保电影节</h3>
+                        <p>观看启发人心的环保纪录片，与电影制作人和环保专家交流。</p>
+                        <a href="#" class="btn">报名参加</a>
                     </div>
                 </div>
             </div>
@@ -615,55 +733,55 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>加入环保行动者行列</h2>
+            <p>无论您能贡献多少时间或资源，您的参与都能带来改变。成为解决方案的一部分！</p>
+            <a href="#" class="btn">成为志愿者</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>Eco Warriors</h3>
+                    <p>我们致力于通过社区行动和教育，保护地球的自然资源，创造可持续的未来。</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-douyin"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#mission">我们的使命</a></li>
+                        <li><a href="#programs">环保项目</a></li>
+                        <li><a href="#events">活动日历</a></li>
+                        <li><a href="#get-involved">参与我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>环保项目</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">塑料回收</a></li>
+                        <li><a href="#">太阳能计划</a></li>
+                        <li><a href="#">海岸线保护</a></li>
+                        <li><a href="#">环保教育</a></li>
+                        <li><a href="#">城市绿化</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 北京市朝阳区环保路123号</p>
+                    <p><i class="fas fa-phone"></i> +86 10 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> contact@ecowarriors.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 Eco Warriors. 保留所有权利。</p>
             </div>
         </div>
     </footer>
@@ -718,5 +836,4 @@
         });
     </script>
 </body>
-
 </html>
